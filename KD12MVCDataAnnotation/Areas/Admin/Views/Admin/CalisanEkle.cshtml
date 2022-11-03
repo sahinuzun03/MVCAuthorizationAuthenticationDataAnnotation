@@ -1,0 +1,56 @@
+﻿
+@model KD12MVCDataAnnotation.Areas.Admin.Models.ViewModel.CalisanEkleVM
+
+@{
+    ViewData["Title"] = "CalisanEkle";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CalisanEkle" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="KullaniciAdi" class="control-label"></label>
+                <input asp-for="KullaniciAdi" class="form-control" />
+                <span asp-validation-for="KullaniciAdi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KullaniciSoyadi" class="control-label"></label>
+                <input asp-for="KullaniciSoyadi" class="form-control" />
+                <span asp-validation-for="KullaniciSoyadi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KullaniciMail" class="control-label"></label>
+                <input asp-for="KullaniciMail" class="form-control" />
+                <span asp-validation-for="KullaniciMail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KullaniciSifre" class="control-label"></label>
+                <input asp-for="KullaniciSifre" class="form-control" />
+                <span asp-validation-for="KullaniciSifre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KullaniciDogumTarihi" class="control-label"></label>
+                <input asp-for="KullaniciDogumTarihi" class="form-control" />
+                <span asp-validation-for="KullaniciDogumTarihi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KullaniciRolu" class="control-label"></label>
+                <select asp-for="KullaniciRolu" class="form-control" asp-items="Html.GetEnumSelectList<Roles>()">
+                    <option selected="selected" values"">Please Select</option>
+                </select>
+                <span asp-validation-for="KullaniciRolu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -22,9 +22,8 @@
 
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Areas\Calisan\Data\" />
-    <Folder Include="Areas\Calisan\Models\" />
+    <Folder Include="Areas\Person\Data\" />
+    <Folder Include="Areas\Person\Models\" />
   </ItemGroup>
 
 </Project>

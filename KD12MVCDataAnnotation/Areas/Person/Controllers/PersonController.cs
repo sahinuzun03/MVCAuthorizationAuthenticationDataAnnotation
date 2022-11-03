@@ -1,11 +1,10 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace KD12MVCDataAnnotation.Areas.Calisan.Controllers
+namespace KD12MVCDataAnnotation.Areas.Person.Controllers
 {
-    //Admin'de Çalışan'a ait controller üzerinden verilere ulaşmasını sağladım.
     [Authorize(Roles = "Calisan,Admin")]
-    public class CalisanController : Controller
+    public class PersonController : Controller
     {
         public IActionResult Index()
         {

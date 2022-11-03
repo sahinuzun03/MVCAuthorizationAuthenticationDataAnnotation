@@ -24,7 +24,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
             HttpOnly = true, //Kötü niyetli insanlarýn client-side tarafýndan cookie eriþimi kapatýldý
 
         };
-        x.ExpireTimeSpan = TimeSpan.FromSeconds(20); //Ezilme durumuna karþýlýk tekrardan süresini veriyoruz.
+        x.ExpireTimeSpan = TimeSpan.FromDays(1); //Ezilme durumuna karþýlýk tekrardan süresini veriyoruz.
         x.SlidingExpiration = true; //istek gelirse tekrardan cookie süresi uzayacak
         x.Cookie.MaxAge = x.ExpireTimeSpan;
        
@@ -51,9 +51,9 @@ app.UseAuthorization();
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapAreaControllerRoute(
-            name: "Calisan",
-            areaName: "Calisan",
-            pattern: "Calisan/{controller=Calisan}/{action=Index}/{id?}");
+            name: "Person",
+            areaName: "Person",
+            pattern: "Person/{controller=Person}/{action=Index}/{id?}");
 
     endpoints.MapAreaControllerRoute(
                 name: "Admin",

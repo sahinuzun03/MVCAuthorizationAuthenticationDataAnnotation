@@ -64,7 +64,7 @@ namespace KD12MVCDataAnnotation.Controllers
                 }
                 if (girisYapanKisi.Role == Roles.Calisan)
                 {
-                    return RedirectToAction("Index", "Calisan", new { area = "Calisan" });
+                    return RedirectToAction("Index", "Person", new { area = "Person" });
                 }
             }
             return View();
